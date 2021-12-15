@@ -4,7 +4,6 @@ import (
   "fmt"
   "os"
   "time"
-  "encoding/json"
   "io/ioutil"
   "crypto/md5"
   "net/url"
@@ -114,14 +113,11 @@ func DownloadFromLdap(addr string) {
     fmt.Println("Key[",key,"] Value[",value,"]")
     class := value.GetAttributeValue("objectClass")
 
-    xyz, _ := json.MarshalIndent(value,"", " ")
-    fmt.Println(xyz)
-
     if class == "javaNamingReference" {
 	    fmt.Println("objectClass: "+class)
 	    grab(value);
     } else {
-	    fmt.Println("... "+class)
+	    fmt.Println("Not JavaNamingReference... "+class)
     }
 
   }
