@@ -2,5 +2,9 @@
 Quick and Dirty Utility to download the classfile payload from log4j ldap exploitation attempt url
 
 1. Install go
-2. bash build.sh
-3. l4jdl ldap://somedomain/Exploit
+2. get code from git
+3. Enter code directory
+4. `bash build.sh`
+5. `l4jdl ldap://somedomain/Exploit`
+
+Should get the class URL from the LDAP server, then download the class and save it to downloaded dir (with filename based of md5sum of class)
