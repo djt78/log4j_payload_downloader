@@ -1,7 +1,7 @@
 # log4j_payload_downloader  
 log4shell CVE-2021-44228
 
-Quick and Dirty Utility to download the classfile payload from log4j ldap exploitation attempt url bassed on the project https://github.com/Adikso/minecraft-log4j-honeypot
+Quick and Dirty Utility to download the classfile payload from log4j ldap exploitation attempt url bassed on the project https://github.com/Adikso/minecraft-log4j-honeypot Written in go to avoid having to worry about class running.
 
 1. Install go
 2. get code from git
