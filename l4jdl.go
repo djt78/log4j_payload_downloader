@@ -34,6 +34,12 @@ func grab(entry *ldap.Entry) {
    }
 
    response,err := client.Get(addr.String())
+
+   if err != nil {
+	fmt.Println("Unable to download:"+addr.String())
+	return
+   }
+
    defer response.Body.Close()
 
    bytes, err := ioutil.ReadAll(response.Body)
